@@ -35,10 +35,12 @@ This document maps the source (Hetzner VPS) and destination (local Ubuntu server
 
 | Property | Value |
 |---|---|
-| Hostname | *(configured in Ansible inventory as `lan_servers`)* |
+| Hostname | `andreas-10vhs1p500` (in Ansible inventory as `lan_servers`) |
 | IP | `192.168.88.16` |
+| MAC Address | `6c:4b:90:ca:f1:d1` (interface `enp1s0f0`) |
+| DHCP Lease | Static reservation in MikroTik RouterOS (`192.168.88.1`) |
 | User | `andreas` |
-| Role | New Immich host (receiving migrated data) |
+| Role | New Immich host (K3s single-node cluster) |
 | Ansible group | `[lan_servers]` in `infrastructure/local/ansible/inventory.ini` |
 
 ### Destination Configuration (Ansible)
